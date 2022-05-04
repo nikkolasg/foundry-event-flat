@@ -18,10 +18,19 @@ mod contracttest_mod {
     use std::sync::Arc;
     pub static CONTRACTTEST_ABI: ethers::contract::Lazy<ethers::core::abi::Abi> =
         ethers::contract::Lazy::new(|| {
-            serde_json :: from_str ("[{\"type\":\"function\",\"name\":\"IS_TEST\",\"inputs\":[],\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"failed\",\"inputs\":[],\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"setUp\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"testExample\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"event\",\"name\":\"log\",\"inputs\":[{\"name\":\"\",\"type\":\"string\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_address\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_bytes\",\"inputs\":[{\"name\":\"\",\"type\":\"bytes\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_bytes32\",\"inputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_int\",\"inputs\":[{\"name\":\"\",\"type\":\"int256\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_address\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"address\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_bytes\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"bytes\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_bytes32\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"bytes32\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_decimal_int\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"int256\",\"indexed\":false},{\"name\":\"decimals\",\"type\":\"uint256\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_decimal_uint\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"uint256\",\"indexed\":false},{\"name\":\"decimals\",\"type\":\"uint256\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_int\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"int256\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_string\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"string\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_named_uint\",\"inputs\":[{\"name\":\"key\",\"type\":\"string\",\"indexed\":false},{\"name\":\"val\",\"type\":\"uint256\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_string\",\"inputs\":[{\"name\":\"\",\"type\":\"string\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"log_uint\",\"inputs\":[{\"name\":\"\",\"type\":\"uint256\",\"indexed\":false}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"logs\",\"inputs\":[{\"name\":\"\",\"type\":\"bytes\",\"indexed\":false}],\"anonymous\":false}]") . expect ("invalid abi")
+            serde_json :: from_str ("[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_address\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_bytes\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_bytes32\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_int\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_address\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"bytes\",\"name\":\"val\",\"type\":\"bytes\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_bytes\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"bytes32\",\"name\":\"val\",\"type\":\"bytes32\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_bytes32\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\",\"components\":[],\"indexed\":false},{\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_decimal_int\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"uint256\",\"name\":\"val\",\"type\":\"uint256\",\"components\":[],\"indexed\":false},{\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_decimal_uint\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_int\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"string\",\"name\":\"val\",\"type\":\"string\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_string\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\",\"components\":[],\"indexed\":false},{\"internalType\":\"uint256\",\"name\":\"val\",\"type\":\"uint256\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_named_uint\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_string\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"log_uint\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\",\"components\":[],\"indexed\":false}],\"type\":\"event\",\"name\":\"logs\",\"outputs\":[],\"anonymous\":false},{\"inputs\":[],\"stateMutability\":\"view\",\"type\":\"function\",\"name\":\"IS_TEST\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\",\"components\":[]}]},{\"inputs\":[],\"stateMutability\":\"view\",\"type\":\"function\",\"name\":\"failed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\",\"components\":[]}]},{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"name\":\"setUp\",\"outputs\":[]},{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\",\"name\":\"testExample\",\"outputs\":[]}]") . expect ("invalid abi")
         });
-    #[derive(Clone)]
+    #[doc = r" Bytecode of the #name contract"]
+    pub static CONTRACTTEST_BYTECODE: ethers::contract::Lazy<ethers::core::types::Bytes> =
+        ethers::contract::Lazy::new(|| {
+            "0x60806040526000805460ff1916600117905534801561001d57600080fd5b5060b48061002c6000396000f3fe6080604052348015600f57600080fd5b506004361060465760003560e01c80630a9254e414604b5780633f5a4a2a14604b578063ba414fa614604d578063fa7626d4146072575b600080fd5b005b600054605e90610100900460ff1681565b604051901515815260200160405180910390f35b600054605e9060ff168156fea26469706673582212205a1ae98fd6987c89802c1b3501202ddfc537a74636d1a29bd160f998a689ea4064736f6c634300080a0033" . parse () . expect ("invalid bytecode")
+        });
     pub struct ContractTest<M>(ethers::contract::Contract<M>);
+    impl<M> Clone for ContractTest<M> {
+        fn clone(&self) -> Self {
+            ContractTest(self.0.clone())
+        }
+    }
     impl<M> std::ops::Deref for ContractTest<M> {
         type Target = ethers::contract::Contract<M>;
         fn deref(&self) -> &Self::Target {
@@ -43,9 +52,46 @@ mod contracttest_mod {
             address: T,
             client: ::std::sync::Arc<M>,
         ) -> Self {
-            let contract =
-                ethers::contract::Contract::new(address.into(), CONTRACTTEST_ABI.clone(), client);
-            Self(contract)
+            ethers::contract::Contract::new(address.into(), CONTRACTTEST_ABI.clone(), client).into()
+        }
+        #[doc = r" Constructs the general purpose `Deployer` instance based on the provided constructor arguments and sends it."]
+        #[doc = r" Returns a new instance of a deployer that returns an instance of this contract after sending the transaction"]
+        #[doc = r""]
+        #[doc = r" Notes:"]
+        #[doc = r" 1. If there are no constructor arguments, you should pass `()` as the argument."]
+        #[doc = r" 1. The default poll duration is 7 seconds."]
+        #[doc = r" 1. The default number of confirmations is 1 block."]
+        #[doc = r""]
+        #[doc = r""]
+        #[doc = r" # Example"]
+        #[doc = r""]
+        #[doc = r" Generate contract bindings with `abigen!` and deploy a new contract instance."]
+        #[doc = r""]
+        #[doc = r" *Note*: this requires a `bytecode` and `abi` object in the `greeter.json` artifact."]
+        #[doc = r""]
+        #[doc = r" ```ignore"]
+        #[doc = r" # async fn deploy<M: ethers::providers::Middleware>(client: ::std::sync::Arc<M>) {"]
+        #[doc = r#"     abigen!(Greeter,"../greeter.json");"#]
+        #[doc = r""]
+        #[doc = r#"    let greeter_contract = Greeter::deploy(client, "Hello world!".to_string()).unwrap().send().await.unwrap();"#]
+        #[doc = r"    let msg = greeter_contract.greet().call().await.unwrap();"]
+        #[doc = r" # }"]
+        #[doc = r" ```"]
+        pub fn deploy<T: ethers::core::abi::Tokenize>(
+            client: ::std::sync::Arc<M>,
+            constructor_args: T,
+        ) -> Result<
+            ethers::contract::builders::ContractDeployer<M, Self>,
+            ethers::contract::ContractError<M>,
+        > {
+            let factory = ethers::contract::ContractFactory::new(
+                CONTRACTTEST_ABI.clone(),
+                CONTRACTTEST_BYTECODE.clone().into(),
+                client,
+            );
+            let deployer = factory.deploy(constructor_args)?;
+            let deployer = ethers::contract::ContractDeployer::new(deployer);
+            Ok(deployer)
         }
         #[doc = "Calls the contract's `IS_TEST` (0xfa7626d4) function"]
         pub fn is_test(&self) -> ethers::contract::builders::ContractCall<M, bool> {
@@ -156,6 +202,11 @@ mod contracttest_mod {
         #[doc = r" Returns an [`Event`](#ethers_contract::builders::Event) builder for all events of this contract"]
         pub fn events(&self) -> ethers::contract::builders::Event<M, ContractTestEvents> {
             self.0.event_with_filter(Default::default())
+        }
+    }
+    impl<M: ethers::providers::Middleware> From<ethers::contract::Contract<M>> for ContractTest<M> {
+        fn from(contract: ethers::contract::Contract<M>) -> Self {
+            Self(contract)
         }
     }
     #[derive(
